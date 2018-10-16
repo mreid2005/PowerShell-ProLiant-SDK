@@ -184,9 +184,10 @@ try
                                 $logicalDrive.PSObject.Properties | ForEach-Object {
                                 if($_.Value -ne $null){ $logicalDriveInfo | add-member Noteproperty $_.Name  $_.Value}
                                 }
-                            }
+                            	$logicalDriveInfo 
+			    }
                     
-                            $logicalDriveInfo 
+                            
                         }
 
                         if($item.PhysicalDrives -ne $null)
@@ -200,9 +201,9 @@ try
                                 $physicalDrive.PSObject.Properties | ForEach-Object {
                                 if($_.Value -ne $null){ $physicalDriveInfo | add-member Noteproperty $_.Name  $_.Value}
                                 }
+				$physicalDriveInfo 
                             }
-                    
-                            $physicalDriveInfo 
+                                        
                         }
 
                         if($item.StorageEnclosures -ne $null)
